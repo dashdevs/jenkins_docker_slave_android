@@ -1,8 +1,8 @@
-FROM mikhailmerkulov/jenkins_slave_base:latest
+FROM jenkins2_slave
 
 USER root
 
-ENV ANDROID_SDK_TOOLS_VERSION="3859397" \
+ENV ANDROID_SDK_TOOLS_VERSION="4333796" \  
     ANDROID_NDK="/opt/android-ndk" \
     ANDROID_NDK_HOME="/opt/android-ndk" \
     # Get the latest version from https://developer.android.com/ndk/downloads/index.html
@@ -63,7 +63,6 @@ RUN echo "installing sdk tools" && \
     echo "installing platform tools " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "platform-tools" && \
-        "patcher;v4" && \
     echo "installing build tools " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "build-tools;29.0.2" \
@@ -98,6 +97,7 @@ RUN echo "installing sdk tools" && \
     echo "installing play services " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "extras;google;google_play_services" \
+        "patcher;v4" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" && \
     echo "installing Google APIs" && \
