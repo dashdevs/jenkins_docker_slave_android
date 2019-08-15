@@ -1,3 +1,4 @@
+FROM mikhailmerkulov/jenkins_slave_base:latest
 FROM jenkins2_slave
 
 USER root
