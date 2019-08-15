@@ -97,9 +97,10 @@ RUN echo "installing sdk tools" && \
     echo "installing play services " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "extras;google;google_play_services" \
-        "patcher;v4" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager
+    "patcher;v4" && \ 
     echo "installing Google APIs" && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "add-ons;addon-google_apis-google-24" \
