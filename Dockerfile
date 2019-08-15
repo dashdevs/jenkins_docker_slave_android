@@ -44,6 +44,11 @@ RUN echo "installing sdk tools" && \
     echo '### User Sources for Android SDK Manager' > \
         "$HOME/.android/repositories.cfg" && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
     echo "installing platforms" && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "platforms;android-29" \
@@ -111,6 +116,12 @@ RUN echo "installing sdk tools" && \
         "add-ons;addon-google_apis-google-18" \
         "add-ons;addon-google_apis-google-17" \
         "add-ons;addon-google_apis-google-16" && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager --licenses > /dev/null && \
     echo "installing emulator " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager "emulator" && \
     echo "installing system image with android 25 and google apis" && \
