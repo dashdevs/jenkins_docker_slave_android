@@ -104,7 +104,7 @@ RUN echo "installing sdk tools" && \
         "extras;google;google_play_services" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
         "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.1" && \
-    yes | "$ANDROID_HOME"/tools/bin/sdkmanager
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
     "patcher;v4" && \ 
     echo "installing Google APIs" && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
